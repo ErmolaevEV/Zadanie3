@@ -29,7 +29,7 @@ namespace Zadanie3
                 Application.Exit();
             }
 
-            toolStrip1.Text = $" {authClass.auth_fio}! {authClass.auth_id.ToString()}";
+            toolStrip1.Text = $"{authClass.auth_fio}! {authClass.auth_id.ToString()}";
 
             switch (authClass.auth_role)
             {
@@ -54,6 +54,12 @@ namespace Zadanie3
                     break;
             }
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 component_UserMgmt = new Form3();
+            component_UserMgmt.ShowDialog();
         }
     }
 }

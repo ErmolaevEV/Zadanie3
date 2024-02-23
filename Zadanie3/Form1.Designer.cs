@@ -42,14 +42,14 @@
             // 
             textBox1.Location = new Point(313, 114);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(268, 27);
+            textBox1.Size = new Size(295, 27);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(313, 3);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(268, 27);
+            textBox2.Size = new Size(283, 27);
             textBox2.TabIndex = 1;
             // 
             // tableLayoutPanel1

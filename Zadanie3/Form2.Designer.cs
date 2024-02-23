@@ -72,6 +72,7 @@
             button4.TabIndex = 7;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // toolStrip1
             // 
@@ -79,7 +80,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripLabel1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(584, 25);
             toolStrip1.TabIndex = 8;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -93,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(584, 450);
             Controls.Add(toolStrip1);
             Controls.Add(button4);
             Controls.Add(button3);

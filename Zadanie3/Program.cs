@@ -29,7 +29,7 @@ namespace Zadanie3
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form());
+            Application.Run(new Form1());
         }
     }
 }

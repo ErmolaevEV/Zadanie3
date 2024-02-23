@@ -11,15 +11,21 @@ namespace Zadanie3
             InitializeComponent();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             string login = textBox1.Text;
             string password = textBox2.Text;
-            string connStr = "server=pma.sdlik.ru;port=62002;user=st_5;databes=is_5_EKZ;password=123456789;";
+            string connStr = "server=pma.sdlik.ru; port=62002; user=st_5; databes=is_5_EKZ; password=123456789;";
             MySqlConnection conn;
             conn = new MySqlConnection(connStr);
             conn.Open();
-            string querySql = $"SELECT COUNT(*) FROM ST_5_T WHERE loginUsers='{login}' and PassUsers='{password}' and enabledUsers=1";
+            string querySql = $"SELECT COUNT(*) FROM ST_5_T WHERE loginUsers='{login}' and passUsers='{password}' and enabledUsers=1";
             MySqlCommand AuthCom = new MySqlCommand(querySql, conn);
             string result = AuthCom.ExecuteScalar().ToString();
 
@@ -42,9 +48,9 @@ namespace Zadanie3
                 while (reader.Read())
                 {
                     authClass.auth_id = Convert.ToInt32(reader[0].ToString());
-                    authClass.auth_fio = reader[2].ToString();
+                    authClass.auth_fio = reader[3].ToString();
                     authClass.auth_role = Convert.ToInt32(reader[6].ToString());
-                    authClass.auth_role_title = reader[4].ToString();
+                    authClass.auth_role_title = reader[5].ToString();
 
                 }
                 reader.Close();
@@ -59,13 +65,9 @@ namespace Zadanie3
                 Application.Exit();
             }
             conn.Close();
+
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-       
     }
 }
